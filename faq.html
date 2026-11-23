@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Frequently asked questions about DermaCheck — how it works, what it checks, and how to use it.">
+    <meta name="theme-color" content="#1D4E73">
+
+    <title>FAQ | DermaCheck</title>
+
+    <link rel="icon" href="data:,">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="navbar__logo">DermaCheck</a>
+
+        <button class="navbar__toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navbar-links">
+            ☰
+        </button>
+
+        <ul class="navbar__links" id="navbar-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="faq.html" class="active">FAQ</a></li>
+            <li><a href="contacts.html">Contact</a></li>
+            <li><a href="scan_product.html" class="nav-button">Scan Product</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+
+        <section class="page-header" id="faq">
+            <span class="section-tag">Need help?</span>
+            <h1>Frequently asked questions</h1>
+            <p class="page-header__lede">
+                Drag the handle on any question to reorder it — put the ones
+                you care about most up top.
+            </p>
+        </section>
+
+        <section class="faq-section" aria-label="Frequently asked questions">
+            <ul class="faq-list" id="faq-list">
+
+                <li class="faq-item" draggable="true">
+
+<!-- FAQ QUESTION 1 -->
+<!-- Each FAQ question is placed inside an LI element.
+     draggable="true" allows the question to be moved
+     to a different position in the FAQ list. -->
+
+<li class="faq-item" draggable="true">
+
+    <!-- This DIV groups the drag handle and question button
+         so they can appear next to each other. -->
+
+    <div class="faq-item__row">
+
+        <!-- DRAG HANDLE:
+             This button allows visitors to drag and rearrange
+             the FAQ questions.
+
+             aria-label describes the button for screen readers.
+             type="button" prevents it from acting as a form submit button. -->
+
+        <button class="faq-drag-handle"
+                aria-label="Drag to reorder this question"
+                type="button">
+
+            <!-- SVG creates the six-dot drag icon.
+                 Each circle represents one small dot.
+                 currentColor makes the dots use the CSS text colour. -->
+
+            <svg viewBox="0 0 20 20"
+                 width="16"
+                 height="16"
+                 aria-hidden="true">
+
+                <circle cx="6" cy="5" r="1.4" fill="currentColor"/>
+                <circle cx="14" cy="5" r="1.4" fill="currentColor"/>
+
+                <circle cx="6" cy="10" r="1.4" fill="currentColor"/>
+                <circle cx="14" cy="10" r="1.4" fill="currentColor"/>
+
+                <circle cx="6" cy="15" r="1.4" fill="currentColor"/>
+                <circle cx="14" cy="15" r="1.4" fill="currentColor"/>
+
+            </svg>
+
+        </button>
+
+
+        <!-- QUESTION BUTTON:
+             Displays the FAQ question.
+             Visitors click this button to show or hide its answer.
+
+             aria-expanded="false" means the answer starts closed.
+             JavaScript changes this to true when the answer opens. -->
+
+        <button class="faq-question"
+                aria-expanded="false"
+                type="button">
+
+            <!-- SPAN holds the actual question text.
+                 It allows the question text to be styled separately. -->
+
+            <span>
+                How does DermaCheck identify allergens?
+            </span>
+
+            <!-- This SVG creates the small downward arrow.
+                 It visually indicates that the answer can be expanded.
+                 CSS can rotate it when the question opens. -->
+
+            <svg class="faq-chevron"
+                 viewBox="0 0 20 20"
+                 width="16"
+                 height="16"
+                 aria-hidden="true">
+
+                <path d="M5 7l5 5 5-5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/>
+
+            </svg>
+
+        </button>
+
+    </div>
+
+
+    <!-- ANSWER SECTION:
+         This DIV contains the answer belonging to this question.
+         CSS can hide it when the page first loads.
+         JavaScript can display it when the question is clicked. -->
+
+    <div class="faq-answer">
+
+        <!-- P displays the answer as a paragraph. -->
+
+        <p>
+            DermaCheck cross-references each ingredient on a
+            product's label against a database of common
+            allergens and the personal profile you've set up,
+            flagging any matches instantly.
+        </p>
+
+    </div>
+
+</li>
+<!-- Closes the first FAQ item. -->
+
+
+                <li class="faq-item" draggable="true">
+                    <div class="faq-item__row">
+                        <button class="faq-drag-handle" aria-label="Drag to reorder this question" type="button">
+                            <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">
+                                <circle cx="6" cy="5" r="1.4" fill="currentColor"/><circle cx="14" cy="5" r="1.4" fill="currentColor"/>
+                                <circle cx="6" cy="10" r="1.4" fill="currentColor"/><circle cx="14" cy="10" r="1.4" fill="currentColor"/>
+                                <circle cx="6" cy="15" r="1.4" fill="currentColor"/><circle cx="14" cy="15" r="1.4" fill="currentColor"/>
+                            </svg>
+                        </button>
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Do I need to create an account to use it?</span>
+                            <svg class="faq-chevron" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">
+                                <path d="M5 7l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            No — you can scan or search any product without
+                            signing up. Creating a profile just lets
+                            DermaCheck remember your allergens so results are
+                            personalized each time.
+                        </p>
+                    </div>
+                </li>
+
+ 
+<!-- FAQ QUESTION 2 -->
+<!-- Explains whether users need an account to use DermaCheck. -->
+
+<li class="faq-item" draggable="true">
+
+    <div class="faq-item__row">
+
+        <!-- Button used to drag and rearrange this question. -->
+        <button class="faq-drag-handle"
+                aria-label="Drag to reorder this question"
+                type="button">
+
+            <!-- Six-dot drag icon. -->
+            <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">
+                <circle cx="6" cy="5" r="1.4" fill="currentColor"/>
+                <circle cx="14" cy="5" r="1.4" fill="currentColor"/>
+                <circle cx="6" cy="10" r="1.4" fill="currentColor"/>
+                <circle cx="14" cy="10" r="1.4" fill="currentColor"/>
+                <circle cx="6" cy="15" r="1.4" fill="currentColor"/>
+                <circle cx="14" cy="15" r="1.4" fill="currentColor"/>
+            </svg>
+
+        </button>
+
+        <!-- Clicking this button opens or closes the answer. -->
+        <button class="faq-question" aria-expanded="false" type="button">
+
+            <!-- Question displayed to the visitor. -->
+            <span>Do I need to create an account to use it?</span>
+
+            <!-- Downward arrow indicating an expandable answer. -->
+            <svg class="faq-chevron" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">
+                <path d="M5 7l5 5 5-5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/>
+            </svg>
+
+        </button>
+
+    </div>
+
+    <!-- Answer displayed when the visitor clicks the question. -->
+    <div class="faq-answer">
+        <p>
+            No — you can scan or search any product without
+            signing up. Creating a profile just lets
+            DermaCheck remember your allergens so results are
+            personalized each time.
+        </p>
+    </div>
+
+</li>
+
+
+<!-- FAQ QUESTION 3 -->
+<!-- Explains what happens when a product is not in the database. -->
+
+<li class="faq-item" draggable="true">
+
+    <div class="faq-item__row">
+
+        <!-- Drag handle for rearranging the question. -->
+        <button class="faq-drag-handle"
+                aria-label="Drag to reorder this question"
+                type="button">
+
+            <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">
+                <circle cx="6" cy="5" r="1.4" fill="currentColor"/>
+                <circle cx="14" cy="5" r="1.4" fill="currentColor"/>
+                <circle cx="6" cy="10" r="1.4" fill="currentColor"/>
+                <circle cx="14" cy="10" r="1.4" fill="currentColor"/>
+                <circle cx="6" cy="15" r="1.4" fill="currentColor"/>
+                <circle cx="14" cy="15" r="1.4" fill="currentColor"/>
+            </svg>
+
+        </button>
+
+        <!-- Button containing the question and arrow icon. -->
+        <button class="faq-question" aria-expanded="false" type="button">
+
+            <!-- Question text. -->
+            <span>What if a product isn't in the database yet?</span>
+
+            <!-- Arrow showing that the answer can be expanded. -->
+            <svg class="faq-chevron" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">
+                <path d="M5 7l5 5 5-5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/>
+            </svg>
+
+        </button>
+
+    </div>
+
+    <!-- Answer to question 3. -->
+    <div class="faq-answer">
+        <p>
+            You can type or photograph the ingredient list
+            directly, and DermaCheck will read and check it
+            the same way — the product doesn't need to be
+            pre-listed.
+        </p>
+    </div>
+
+</li>
+
+
+<!-- FAQ QUESTION 4 -->
+<!-- Explains how DermaCheck handles users' allergen profiles. -->
+
+<li class="faq-item" draggable="true">
+
+    <div class="faq-item__row">
+
+        <!-- Drag handle for moving this question. -->
+        <button class="faq-drag-handle"
+                aria-label="Drag to reorder this question"
+                type="button">
+
+            <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">
+                <circle cx="6" cy="5" r="1.4" fill="currentColor"/>
+                <circle cx="14" cy="5" r="1.4" fill="currentColor"/>
+                <circle cx="6" cy="10" r="1.4" fill="currentColor"/>
+                <circle cx="14" cy="10" r="1.4" fill="currentColor"/>
+                <circle cx="6" cy="15" r="1.4" fill="currentColor"/>
+                <circle cx="14" cy="15" r="1.4" fill="currentColor"/>
+            </svg>
+
+        </button>
+
+        <!-- Question button. -->
+        <button class="faq-question" aria-expanded="false" type="button">
+
+            <!-- Question text. -->
+            <span>Is my allergen profile shared with anyone?</span>
+
+            <!-- Expandable answer arrow. -->
+            <svg class="faq-chevron" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">
+                <path d="M5 7l5 5 5-5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/>
+            </svg>
+
+        </button>
+
+    </div>
+
+    <!-- Answer to question 4. -->
+    <div class="faq-answer">
+        <p>
+            No. Your allergen profile stays on your device
+            and is only used to check products you scan —
+            it is never sold or shared with third parties.
+        </p>
+    </div>
+
+</li>
+
+
+<!-- FAQ QUESTION 5 -->
+<!-- Explains that DermaCheck does not replace professional medical advice. -->
+
+<li class="faq-item" draggable="true">
+
+    <div class="faq-item__row">
+
+        <!-- Drag handle for rearranging this question. -->
+        <button class="faq-drag-handle"
+                aria-label="Drag to reorder this question"
+                type="button">
+
+            <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">
+                <circle cx="6" cy="5" r="1.4" fill="currentColor"/>
+                <circle cx="14" cy="5" r="1.4" fill="currentColor"/>
+                <circle cx="6" cy="10" r="1.4" fill="currentColor"/>
+                <circle cx="14" cy="10" r="1.4" fill="currentColor"/>
+                <circle cx="6" cy="15" r="1.4" fill="currentColor"/>
+                <circle cx="14" cy="15" r="1.4" fill="currentColor"/>
+            </svg>
+
+        </button>
+
+        <!-- Question button. -->
+        <button class="faq-question" aria-expanded="false" type="button">
+
+            <!-- Question text. -->
+            <span>Can DermaCheck replace advice from a dermatologist?</span>
+
+            <!-- Arrow indicating that the answer can be expanded. -->
+            <svg class="faq-chevron" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true">
+                <path d="M5 7l5 5 5-5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"/>
+            </svg>
+
+        </button>
+
+    </div>
+
+    <!-- Answer to question 5. -->
+    <div class="faq-answer">
+        <p>
+            No. DermaCheck helps you read labels and spot
+            known allergens, but it isn't a substitute for
+            professional medical advice. Always consult a
+            dermatologist for diagnosis or treatment.
+        </p>
+    </div>
+
+</li>
+            </ul>
+        </section>
+
+    </main>
+
+        <!-- Footer -->
+    <footer class="footer" id="contact">
+
+        <div class="footer-container">
+
+            <div class="footer-about">
+                <h2>DermaCheck</h2>
+
+                <p>
+                    Helping you understand skincare ingredients,
+                    identify potential allergens, and make
+                    informed skincare choices.
+                </p>
+
+                <p class="footer-slogan">
+                    Scan. Identify. Protect.
+                </p>
+            </div>
+
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+              <ul>                
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="scanner.html">Scan Product</a></li>
+                <li><a href="#faq">FAQs</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </div>
+
+
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+
+                <p>Email: support@yourwebsite.com</p>
+                <p>Phone: +254 XXX XXX XXX</p>
+                <p>Location: Nairobi, Kenya</p>
+            </div>
+
+
+            <div class="footer-legal">
+                <h3>Legal Information</h3>
+                <ul>
+                  <li><a href="privacy.html">Privacy Policy</a></li>
+                  <li><a href="terms.html">Terms & Conditions</a></li>
+                  <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 DermaCheck. All Rights Reserved.
+            </p>
+
+            <p>
+                Know What Goes on Your Skin.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="faq.js"></script>
+</body>
+</html>

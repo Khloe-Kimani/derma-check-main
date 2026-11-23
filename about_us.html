@@ -3,26 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Derma Check</title>
+    <title>About Us | Derma Check</title>
     <link rel="icon" href="data:,">
-   <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <nav class="navbar">
-  <div class="navbar__logo">DermaCheck</div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar__logo">DermaCheck</a>
 
-  <ul class="navbar__links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about_us.html">About Us</a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="scanner.html" class="nav-button">Scan Product</a></li>
-  </ul>
+        <button class="navbar__toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navbar-links">
+            ☰
+        </button>
 
-  <button class="navbar__toggle" aria-label="Toggle menu" onclick="document.querySelector('.navbar__links').classList.toggle('active')">
-    ☰
-  </button>
- </nav>
+        <ul class="navbar__links" id="navbar-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about_us.html" class="active">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contacts.html">Contact</a></li>
+            <li><a href="scan_product.html" class="nav-button">Scan Product</a></li>
+        </ul>
+    </nav>
 
 <!-- Who We Are -->
 <section class="why-section" id="about">
@@ -154,8 +161,6 @@
   </div>
 </div>
 </section>
-<p style="text-align: center; padding: 50px;"><i>Check any skincare or cosmetic product before you buy it. DermaCheck scans ingredient lists against your personal allergen profile and flags anything that could trigger a reaction — so you can shop with confidence, not guesswork.</i></p>
-
     <!-- Footer -->
     <footer class="footer" id="contact">
 
@@ -199,10 +204,11 @@
 
             <div class="footer-legal">
                 <h3>Legal Information</h3>
-
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms & Conditions</a>
-                <a href="disclaimer.html">Disclaimer</a>
+                <ul>
+                  <li><a href="privacy.html">Privacy Policy</a></li>
+                  <li><a href="terms.html">Terms & Conditions</a></li>
+                  <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
             </div>
 
         </div>

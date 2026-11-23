@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Get in touch with the DermaCheck team.">
+    <meta name="theme-color" content="#1D4E73">
+
+    <title>Contact Us | DermaCheck</title>
+
+    <link rel="icon" href="data:,">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="navbar__logo">DermaCheck</a>
+
+        <button class="navbar__toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navbar-links">
+            ☰
+        </button>
+
+        <ul class="navbar__links" id="navbar-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="scan_product.html" class="nav-button">Scan Product</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+
+        <section class="page-header">
+            <span class="section-tag">Get in touch</span>
+            <h1>Contact us</h1>
+            <p class="page-header__lede">
+                Questions, feedback, or something not working right?
+                We'd like to hear from you.
+            </p>
+        </section>
+
+        <section class="contact-section">
+
+            <form class="contact-form" aria-labelledby="form-title">
+                <h2 id="form-title">Send a message</h2>
+
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="btn btn-primary">Send message</button>
+            </form>
+
+            <div class="contact-details">
+                <h2>Other ways to reach us</h2>
+                <p><strong>Email:</strong> support@yourwebsite.com</p>
+                <p><strong>Phone:</strong> +254 XXX XXX XXX</p>
+                <p><strong>Location:</strong> Nairobi, Kenya</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 DermaCheck. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Select your skincare allergens and cross-reference them against common allergens found in skincare products.">
+    <meta name="theme-color" content="#1D4E73">
+
+    <title>Scan Product | DermaCheck</title>
+
+    <link rel="icon" href="data:,">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="navbar__logo">DermaCheck</a>
+
+        <button class="navbar__toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navbar-links">
+            ☰
+        </button>
+
+        <ul class="navbar__links" id="navbar-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contacts.html">Contact</a></li>
+            <li><a href="scan_product.html" class="nav-button">Scan Product</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+
+        <section class="page-header">
+            <span class="section-tag">Scan Product</span>
+            <h1>Find out what's really in your skincare</h1>
+            <p class="page-header__lede">
+                Click the allergens that affect you below, then paste a
+                product's ingredient list to see if any of your allergens
+                show up in it.
+            </p>
+        </section>
+
+        <!-- Step 1: choose allergens -->
+        <section class="allergen-picker" aria-labelledby="picker-title">
+            <h2 id="picker-title">1. Select your allergens</h2>
+            <p class="note">Click any that apply to you — you can select more than one.</p>
+
+            <div class="allergen-grid" id="allergen-grid"></div>
+
+            <button type="button" class="btn btn-secondary" id="clear-allergens">
+                Clear selection
+            </button>
+        </section>
+
+        <!-- Step 2: cross-reference against a product -->
+        <section class="allergen-check" aria-labelledby="check-title">
+            <h2 id="check-title">2. Check a product's ingredients</h2>
+            <p class="note">
+                Paste or type the ingredient list from a product label below.
+            </p>
+
+            <label for="ingredient-input" class="sr-only">Product ingredient list</label>
+            <textarea
+                id="ingredient-input"
+                rows="4"
+                placeholder="e.g. Aqua, Glycerin, Parfum, Sodium Lauryl Sulfate, Phenoxyethanol..."></textarea>
+
+            <button type="button" class="btn btn-primary" id="check-button">
+                Check ingredients
+            </button>
+
+            <div id="check-result" class="check-result" role="status" aria-live="polite"></div>
+        </section>
+
+        <!-- Reference list -->
+        <section class="allergen-reference" aria-labelledby="reference-title">
+            <h2 id="reference-title">Common skincare allergens — full list</h2>
+            <ul class="allergen-reference__list" id="allergen-reference-list"></ul>
+        </section>
+
+    </main>
+
+        <!-- Footer -->
+    <footer class="footer" id="contact">
+
+        <div class="footer-container">
+
+            <div class="footer-about">
+                <h2>DermaCheck</h2>
+
+                <p>
+                    Helping you understand skincare ingredients,
+                    identify potential allergens, and make
+                    informed skincare choices.
+                </p>
+
+                <p class="footer-slogan">
+                    Scan. Identify. Protect.
+                </p>
+            </div>
+
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+              <ul>                
+                <li><a href="#index.html">Home</a></li>
+                <li><a href="#about_us.html">About Us</a></li>
+                <li><a href="#faq.html">FAQs</a></li>
+                <li><a href="#contacts.html">Contact</a></li>
+                <li><a href="#scan_product.html" class="nav-button">Scan Product</a></li>
+              </ul>
+            </div>
+
+
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+
+                <p>Email: support@yourwebsite.com</p>
+                <p>Phone: +254 XXX XXX XXX</p>
+                <p>Location: Nairobi, Kenya</p>
+            </div>
+
+
+            <div class="footer-legal">
+                <h3>Legal Information</h3>
+                <ul>
+                  <li><a href="privacy.html">Privacy Policy</a></li>
+                  <li><a href="terms.html">Terms & Conditions</a></li>
+                  <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p> &copy; 2026 DermaCheck. All Rights Reserved.</p>
+            <p>Know What Goes on Your Skin.</p>
+        </div>
+
+    </footer>
+    <script src="app.js"></script>
+    <script src="scanProduct.js"></script>
+</body>
+</html>

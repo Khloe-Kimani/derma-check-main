@@ -230,7 +230,6 @@ main, footer {
   color: var(--blue);
 }
 
-
 .hero__features {
   display: flex;
   gap: 24px;
@@ -285,6 +284,7 @@ main, footer {
   gap: 48px;
   align-items: center;
   margin-bottom: 48px;
+  padding: 30px;
 }
 
 .purpose-content p {
@@ -379,12 +379,13 @@ main, footer {
 }
 
 .cta-section a{
-  color: #fff;
+  color:  #fff;
 }
 
 .cta-section a:hover {
-  color: #2B5F8A;
+  color:  #398bc9;
 }
+
 /* ---------- Footer ---------- */
 
 .footer {
@@ -713,6 +714,301 @@ main, footer {
   }
 }
 
-.why-section {
-  padding: 2rem;
+/* ---------- FAQ page ---------- */
+
+.faq-section {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 16px 24px 72px;
+}
+
+.faq-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.faq-item {
+  border: 1px solid var(--bone);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background: #fff;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.faq-item.is-dragging {
+  opacity: 0.4;
+}
+
+.faq-item.drag-over {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 1px var(--blue);
+}
+
+.faq-item__row {
+  display: flex;
+  align-items: center;
+}
+
+.faq-drag-handle {
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: grab;
+  padding: 16px 8px 16px 16px;
+  display: flex;
+  align-items: center;
+  touch-action: none;
+}
+
+.faq-drag-handle:hover {
+  color: var(--blue);
+}
+
+.faq-drag-handle:active {
+  cursor: grabbing;
+}
+
+.faq-question {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+  padding: 16px 16px 16px 4px;
+  cursor: pointer;
+}
+
+.faq-chevron {
+  flex-shrink: 0;
+  color: var(--blue);
+  transition: transform 0.2s ease;
+}
+
+.faq-question[aria-expanded='true'] .faq-chevron {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+}
+
+.faq-answer p {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0;
+  padding: 0 16px 18px 44px;
+}
+
+/* ---------- Allergen checker page ---------- */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.allergen-picker,
+.allergen-check,
+.allergen-reference {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  border-top: 1px solid var(--bone);
+}
+
+.allergen-picker h2,
+.allergen-check h2,
+.allergen-reference h2 {
+  font-size: 1.3rem;
+}
+
+.allergen-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0 20px;
+}
+
+.allergen-chip {
+  background: #fff;
+  border: 1px solid var(--bone);
+  border-radius: 999px;
+  padding: 9px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.allergen-chip:hover {
+  border-color: var(--blue);
+}
+
+.allergen-chip.is-selected {
+  background: var(--deep);
+  border-color: var(--deep);
+  color: #fff;
+}
+
+#ingredient-input {
+  width: 100%;
+  max-width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  padding: 12px 14px;
+  border: 1px solid var(--bone);
+  border-radius: 6px;
+  resize: vertical;
+  margin-bottom: 16px;
+  color: var(--ink);
+  background: #fff;
+}
+
+.check-result {
+  margin-top: 20px;
+}
+
+.check-result__empty {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.check-result__ok {
+  color: var(--ok);
+  font-weight: 600;
+}
+
+.check-result__warning {
+  color: var(--clay-dark);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.check-result__list {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.check-result__list li {
+  margin-bottom: 6px;
+}
+
+.allergen-reference__list {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.allergen-reference__item {
+  border: 1px solid var(--bone);
+  border-radius: 8px;
+  padding: 18px 20px;
+  background: #fff;
+}
+
+.allergen-reference__item h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.allergen-reference__found {
+  font-size: 13px;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.allergen-reference__reaction {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ---------- Contact page ---------- */
+
+.contact-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px 24px 72px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 48px;
+}
+
+.contact-form h2,
+.contact-details h2 {
+  font-size: 1.15rem;
+  margin-bottom: 16px;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  margin: 14px 0 6px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  padding: 10px 12px;
+  border: 1px solid var(--bone);
+  border-radius: 6px;
+  color: var(--ink);
+  background: #fff;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form .btn {
+  margin-top: 20px;
+}
+
+.contact-details {
+  border-left: 2px solid var(--blue);
+  padding-left: 24px;
+}
+
+.contact-details p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.contact-details strong {
+  color: var(--ink);
+}
+
+@media (max-width: 700px) {
+  .contact-section {
+    grid-template-columns: 1fr;
+  }
+  .contact-details {
+    border-left: none;
+    border-top: 1px solid var(--bone);
+    padding-left: 0;
+    padding-top: 24px;
+  }
 }
