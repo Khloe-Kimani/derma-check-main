@@ -230,13 +230,13 @@ main, footer {
   color: var(--blue);
 }
 
-.hero__features {
+#hero__features {
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
 }
 
-.hero__features span {
+#hero__features span {
   color: var(--muted);
   font-size: 14px;
   font-weight: 500;
@@ -383,7 +383,7 @@ main, footer {
 }
 
 .cta-section a:hover {
-  color:  #398bc9;
+  color:  #CBD9E2;
 }
 
 /* ---------- Footer ---------- */
